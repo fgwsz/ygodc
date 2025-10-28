@@ -1,5 +1,3 @@
 /build
-/ygodc-debug
-/ygodc-release
-/ygodc-debug.exe
-/ygodc-release.exe
+/ygodc
+/ygodc.exe

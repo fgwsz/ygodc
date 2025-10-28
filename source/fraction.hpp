@@ -1,4 +1,6 @@
-#pragma once
+#ifndef FRACTION_HPP
+#define FRACTION_HPP
+
 #include<cstddef>//::std::size_t
 #include<numeric>//::std::gcd
 #include<stdexcept>//::std::invalid_argument
@@ -54,3 +56,5 @@ private:
         denominator/=gcd;
     }
 };
+
+#endif//!FRACTION_HPP
