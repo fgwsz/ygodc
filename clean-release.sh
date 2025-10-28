@@ -1,7 +1,8 @@
 #!/bin/bash
 root_path=$(dirname "$(readlink -f "$0")")
 build_path="$root_path/build/linux/release"
-binary_release_path="$root_path/binary-release"
+project_name="ygodc"
+binary_release_path="$root_path/$project_name-release"
 
 if [ -d "$build_path" ]; then
     rm -rf "$build_path"

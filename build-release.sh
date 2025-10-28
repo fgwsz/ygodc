@@ -1,6 +1,6 @@
 #!/bin/bash
 root_path=$(dirname "$(readlink -f "$0")")
-project_name=$(basename $root_path)
+project_name="ygodc"
 build_path="$root_path/build/linux/release"
 if [ ! -d "$build_path" ]; then
     mkdir -p "$build_path"
@@ -9,4 +9,4 @@ cd $build_path
 cmake ../../.. -D CMAKE_BUILD_TYPE=Release
 make
 cd ../../..
-mv "$build_path/$project_name" "$root_path/binary-release"
+mv "$build_path/$project_name" "$root_path/$project_name-release"

@@ -1,6 +1,7 @@
 $root_path=Split-Path -Parent $MyInvocation.MyCommand.Definition
 $build_path=Join-Path $root_path "build/windows/release"
-$binary_release_path=Join-Path $root_path "binary-release.exe"
+$project_name="ygodc"
+$binary_release_path=Join-Path $root_path "$project_name-release.exe"
 
 if(Test-Path -Path $build_path){
     Remove-Item $build_path -Recurse -Force

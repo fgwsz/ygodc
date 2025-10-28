@@ -1,6 +1,7 @@
 $root_path=Split-Path -Parent $MyInvocation.MyCommand.Definition
 $build_path=Join-Path $root_path "build/windows/debug"
-$binary_debug_path=Join-Path $root_path "binary-debug.exe"
+$project_name="ygodc"
+$binary_debug_path=Join-Path $root_path "$project_name-debug.exe"
 
 if(Test-Path -Path $build_path){
     Remove-Item $build_path -Recurse -Force
