@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 project(ygodc LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 aux_source_directory(source SOURCE_DIR)
 add_executable(ygodc ${SOURCE_DIR})
 if(MSVC)

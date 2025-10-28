@@ -3,7 +3,6 @@
 #include<numeric>//::std::gcd
 #include<stdexcept>//::std::invalid_argument
 #include<string>//::std::string
-#include<format>//::std::format
 
 struct Fraction{
     ::std::size_t numerator;//分子
@@ -43,7 +42,8 @@ struct Fraction{
         if(this->denominator==1){
             return ::std::to_string(this->numerator);
         }else{
-            return ::std::format("{}/{}",this->numerator,this->denominator);
+            return ::std::to_string(this->numerator)
+                +"/"+::std::to_string(this->denominator);
         }
     }
 private:

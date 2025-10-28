@@ -2,7 +2,6 @@
 #include<unordered_map>//::std::unordered_map
 #include<string>//::std::string ::std::stoull
 #include<iostream>//::std::cerr ::std::cout
-#include<format>//::std::format
 
 #include"fraction.hpp"
 
@@ -38,11 +37,8 @@ Fraction hypergeometric_probability(
 int main(int argc,char* argv[]){
     //参数检查
     if(argc!=5){
-        ::std::cerr<<::std::format(
-            "用法: {} <牌库总数> <目标牌数量> <抽牌数量> <期望抽到的目标牌数量>"
-            "\n"
-            ,::std::string{argv[0]}
-        );
+        ::std::cerr<<"用法: "<<::std::string{argv[0]}
+            <<"<牌库总数> <目标牌数量> <抽牌数量> <期望抽到的目标牌数量>\n";
         return 1;
     }
     try{
@@ -61,16 +57,10 @@ int main(int argc,char* argv[]){
             ,hand_cards
             ,n
         );
-        ::std::cout<<::std::format(
-            "概率: {} (约 {} %)\n"
-            ,probability.to_string()
-            ,static_cast<double>(probability)*100
-        );
+        ::std::cout<<"概率: "<<probability.to_string()
+            <<" (约 "<<static_cast<double>(probability)*100<<" %)\n";
     }catch(::std::exception const& e){
-        ::std::cerr<<::std::format(
-            "错误: 参数解析失败 - {}\n"
-            ,e.what()
-        );
+        ::std::cerr<<"错误: 参数解析失败 - "<<e.what()<<"\n";
         return 1;
     }
     return 0;
